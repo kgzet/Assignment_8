@@ -10,18 +10,13 @@ fluidPage(
     # Application title
     titlePanel("Gene expression in TPMs"),
 
-    # Sidebar with a slider input for number of bins
+    # Sidebar with an input list to select a gene
     sidebarLayout(
         sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30),
             selectInput(inputId = "select_gene", label = "choose gene to show", choices = TPMs_Genes)
         ),
 
-        # Show a plot of the generated distribution
+        # Show a plot of the chosen gene's expression
         mainPanel(
             plotOutput("distPlot")
         )
