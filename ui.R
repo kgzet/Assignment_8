@@ -1,4 +1,5 @@
 # Kinga Zajdel
+# Assignment_8
 
 library(shiny)
 
@@ -16,7 +17,8 @@ fluidPage(
                         "Number of bins:",
                         min = 1,
                         max = 50,
-                        value = 30)
+                        value = 30),
+            selectInput(inputId = "select_gene", label = "choose gene to show", choices = TPMs_Genes)
         ),
 
         # Show a plot of the generated distribution
@@ -25,3 +27,5 @@ fluidPage(
         )
     )
 )
+
+# No AI used.
